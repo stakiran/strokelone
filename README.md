@@ -2,29 +2,7 @@
 N-times continuous your last pressed key press with Numpad-N.
 
 ## Demo
-Press `A` key.
-
-```
-a
-```
-
-Press `Numpad-1` key.
-
-```
-aa
-```
-
-Press `Numpad-3` key.
-
-```
-aaaaa
-```
-
-Press space key, `Numpad-4` key, `Numpad-4` key, and `A` key.
-
-```
-aaaaa         a
-```
+![strokelone_demo](https://user-images.githubusercontent.com/23325839/40335913-3461357e-5da1-11e8-8a34-7f9f986a0b33.gif)
 
 ## Requirement
 - Windows 7+
@@ -35,6 +13,30 @@ aaaaa         a
 - Edit the variable `builder`.
   - Ex: `builder = C:\Program Files\AutoHotkey\Compiler\Ahk2Exe.exe`
 - Run `build.ahk`
+
+## Customization
+
+### Key-repeat count
+Edit `strokelone.ahk`.
+
+For example:
+
+```ahk
+Numpad4::
+  push_priorkey(4)
+Return
+```
+
+This code means if the key `numpad-4` pressed then press your last pressed key 4-times.
+
+So, if you want to increase the count to double, like this
+
+
+```ahk
+Numpad4::
+  push_priorkey(8)
+Return
+```
 
 ## License
 [MIT License](LICENSE)
