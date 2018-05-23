@@ -52,6 +52,8 @@ push_priorkey(count){
   }
 
   Loop %count% {
-    SendEvent {%priorkey%}
+    SendEvent {%priorkey% down}
+    Sleep 1
   }
+  Send {%priorkey% up}
 }
